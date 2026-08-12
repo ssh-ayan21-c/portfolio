@@ -26,8 +26,8 @@ const AboutMeSection = () => {
         
         <div className="max-w-5xl mx-auto w-full">
           {/* Quote Section */}
-          <div className="mb-4 pl-8 md:pl-48">
-            <h2 className="text-4xl md:text-5xl font-black text-[#1E293B] leading-tight tracking-tighter">
+          <div className="mb-2 pl-0 md:pl-48 mt-[-2rem]">
+            <h2 className="text-2xl md:text-4xl font-black text-[#1E293B] leading-tight tracking-tighter">
               <span className="block">Crack complex algorithms.</span>
               <span className="block text-[#1E293B]/60">Design with bold intent.</span>
               <span className="block">Wire intelligence into pixels.</span>
@@ -38,7 +38,7 @@ const AboutMeSection = () => {
           </div>
 
           {/* Bio Section */}
-          <div className="space-y-2 text-2xl md:text-3xl text-[#1E293B] font-['Caveat'] text-right ml-auto max-w-3xl leading-relaxed mt-4">
+          <div className="space-y-4 text-base md:text-2xl text-[#1E293B] font-serif text-right ml-auto max-w-3xl leading-relaxed mt-4">
             <UnblurText delay={0.1}>
               <p>Hey! I'm Ayan, a 21-year-old CS undergrad bridging the gap between sleek web interfaces and deep learning.</p>
             </UnblurText>
@@ -52,23 +52,45 @@ const AboutMeSection = () => {
             </UnblurText>
           </div>
 
+          {/* Experience Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="mt-6 pt-6 border-t-2 border-[#1E293B]/10 flex flex-col md:flex-row justify-between items-start md:items-start gap-4"
+          >
+            <div className="flex flex-col items-start text-left">
+              <h3 className="text-sm md:text-lg font-bold text-[#1E293B]/70 uppercase tracking-wider mb-1">Experience</h3>
+              <a href="https://drive.google.com/file/d/1jMtju0-byqHxIO2QttQW5QMcaJ8DSSE_/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-lg md:text-2xl font-black text-[#1E293B] hover:underline">
+                Machine Learning Research Intern
+              </a>
+              <span className="text-base md:text-xl text-[#1E293B]/70 font-semibold mt-1">Dual branch vision transformer</span>
+            </div>
+            <div className="flex flex-col items-start md:items-end text-left md:text-right mt-2 md:mt-0">
+              <a href="https://www.linkedin.com/school/ganpat-university/" target="_blank" rel="noopener noreferrer" className="text-base md:text-xl font-bold text-[#1E293B] hover:text-[#1E293B]/70 transition-colors">
+                Ganpat University, Mehsana, Gujarat
+              </a>
+            </div>
+          </motion.div>
+
           {/* Education Section */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
-            className="mt-6 pt-6 border-t-2 border-[#1E293B]/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-2"
+            className="mt-6 pt-6 border-t-2 border-[#1E293B]/10 flex flex-col md:flex-row justify-between items-start md:items-start gap-4"
           >
-            <div>
-              <h3 className="text-lg font-bold text-[#1E293B]/70 uppercase tracking-wider mb-1">Education</h3>
-              <a href="https://iiitk.ac.in/" target="_blank" rel="noopener noreferrer" className="text-xl md:text-2xl font-black text-[#1E293B] hover:text-[#1E293B]/70 transition-colors">
+            <div className="flex flex-col items-start text-left">
+              <h3 className="text-sm md:text-lg font-bold text-[#1E293B]/70 uppercase tracking-wider mb-1">Education</h3>
+              <span className="text-lg md:text-2xl font-black text-[#1E293B]">B.Tech Computer Science</span>
+              <span className="text-base md:text-xl text-[#1E293B]/70 font-semibold mt-1">(2023 - 27)</span>
+            </div>
+            <div className="flex flex-col items-start md:items-end text-left md:text-right mt-2 md:mt-0 md:max-w-[50%]">
+              <a href="https://iiitk.ac.in/" target="_blank" rel="noopener noreferrer" className="text-base md:text-xl font-bold text-[#1E293B] hover:text-[#1E293B]/70 transition-colors">
                 Indian Institute of Information Technology Design & Manufacturing Kurnool
               </a>
-            </div>
-            <div className="text-left md:text-right flex flex-col items-start md:items-end">
-              <span className="text-xl font-bold text-[#1E293B]">B.Tech Computer Science</span>
-              <span className="text-lg text-[#1E293B]/70 font-semibold">(2023 - 27)</span>
             </div>
           </motion.div>
 
