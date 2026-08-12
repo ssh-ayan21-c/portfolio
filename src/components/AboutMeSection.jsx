@@ -16,17 +16,17 @@ const UnblurText = ({ children, delay = 0 }) => {
 
 const AboutMeSection = () => {
   return (
-    <section id="about" className="relative w-full h-screen px-8 pb-8 pt-0 bg-[var(--color-secondary)] z-30">
-      <div className="curved-container w-full h-full relative overflow-hidden py-12 px-8 md:px-24 bg-[#E0FAF1] shadow-2xl flex flex-col justify-center">
+    <section id="about" className="relative w-full min-h-screen px-8 pb-8 pt-0 bg-[var(--color-secondary)] z-30">
+      <div className="curved-container w-full h-full min-h-[90vh] relative overflow-hidden py-16 px-8 md:px-24 bg-[#E0FAF1] shadow-2xl flex flex-col justify-center">
         
         {/* Top Left Heading */}
         <h3 className="absolute top-8 left-12 z-50 text-2xl font-serif text-[#1E293B]/50 italic">
           A peek into my life...
         </h3>
         
-        <div className="max-w-5xl mx-auto w-full">
+        <div className="max-w-5xl mx-auto w-full mt-10 md:mt-0">
           {/* Quote Section */}
-          <div className="mb-2 pl-0 md:pl-48 mt-[-2rem]">
+          <div className="mb-2 pl-0 md:pl-48">
             <h2 className="text-2xl md:text-4xl font-black text-[#1E293B] leading-tight tracking-tighter">
               <span className="block">Crack complex algorithms.</span>
               <span className="block text-[#1E293B]/60">Design with bold intent.</span>
