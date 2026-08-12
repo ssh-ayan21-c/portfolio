@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #D9EAFD;
+  --color-secondary: #F8FAFC;
+  --color-accent: #9AA6B2;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-secondary);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #111111;
+    cursor: none;
+  }
+  a, button, [role="button"] {
+    cursor: none;
+  }
+}
+
+/* Hide native scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+
+.curved-container {
+  background-color: var(--color-primary);
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #111, var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 3D Text block styling for the letters */
+.text-3d {
+  color: #fff;
+  text-shadow: 
+    -1px 1px 0px #e0e0e0,
+    -2px 2px 0px #d0d0d0,
+    -3px 3px 0px #c0c0c0,
+    -4px 4px 0px #b0b0b0,
+    -5px 5px 0px #a0a0a0,
+    -6px 6px 0px #909090,
+    -7px 7px 10px rgba(0, 0, 0, 0.3);
+}
