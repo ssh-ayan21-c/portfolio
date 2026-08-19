@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-mot
 
 const CircularText = () => {
   return (
-    <div className="relative flex items-center justify-center w-64 h-64 mt-[-2rem] mb-0">
+    <div className="relative flex items-center justify-center w-64 h-64 mt-[-2rem] mb-0 text-content dark:text-[#D9EAFD]">
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
@@ -15,7 +15,7 @@ const CircularText = () => {
             d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
             fill="none"
           />
-          <text fill="var(--theme-content)" fontSize="9.5" fontWeight="bold" letterSpacing="1.5" style={{ textTransform: 'uppercase' }}>
+          <text fill="currentColor" fontSize="9.5" fontWeight="bold" letterSpacing="1.5" style={{ textTransform: 'uppercase' }}>
             <textPath href="#circlePath" startOffset="0%">
               checkout the stuffs i made • checkout the stuffs i made • 
             </textPath>
@@ -27,12 +27,12 @@ const CircularText = () => {
       <motion.div
         animate={{ rotateY: 360 }}
         transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-        className="relative z-10 w-24 h-24 flex items-center justify-center text-content"
+        className="relative z-10 w-24 h-24 flex items-center justify-center"
         style={{ transformStyle: 'preserve-3d' }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" className="w-full h-full" fill="transparent">
             {/* Thick 3D arrow paths */}
-            <path d="M40 10 h20 v40 h20 L50 90 L20 50 h20 z" stroke="var(--theme-content)" strokeWidth="12" strokeLinejoin="round" />
+            <path d="M40 10 h20 v40 h20 L50 90 L20 50 h20 z" stroke="currentColor" strokeWidth="12" strokeLinejoin="round" />
         </svg>
       </motion.div>
     </div>
@@ -73,7 +73,7 @@ const TransitionSection = () => {
   return (
     <section 
       ref={containerRef}
-      className="relative w-full h-[150vh] bg-[var(--color-secondary)] text-content z-10"
+      className="relative w-full h-[150vh] bg-[var(--color-secondary)] z-10 text-content dark:text-[#D9EAFD]"
     >
       <div className="sticky top-0 min-h-screen w-full flex flex-col items-center justify-center overflow-hidden pt-10 pb-0">
         
@@ -93,8 +93,8 @@ const TransitionSection = () => {
             {[...Array(20)].map((_, i) => (
               <span 
                 key={i} 
-                className={i % 2 === 0 ? "text-content" : "text-transparent"}
-                style={i % 2 !== 0 ? { WebkitTextStroke: '2px #1E293B' } : {}}
+                className={i % 2 === 0 ? "text-current" : "text-transparent"}
+                style={i % 2 !== 0 ? { WebkitTextStroke: '2px currentColor' } : {}}
               >
                 DESIGN
               </span>
@@ -103,7 +103,7 @@ const TransitionSection = () => {
           
           <div 
             className="text-[12vh] font-black leading-tight text-transparent"
-            style={{ WebkitTextStroke: '3px #1E293B' }}
+            style={{ WebkitTextStroke: '3px currentColor' }}
           >
             &amp;
           </div>

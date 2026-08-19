@@ -63,7 +63,7 @@ const ProjectsSection = () => {
             >
               <div className="flex justify-between items-start relative z-10">
                 <div className="max-w-[80%] md:max-w-[70%]">
-                  <h3 className="text-xl md:text-4xl font-bold text-content group-hover:scale-105 transition-transform duration-500 origin-top-left">
+                  <h3 className="text-xl md:text-4xl font-bold text-[#1E293B] group-hover:scale-105 transition-transform duration-500 origin-top-left">
                     {project.title}
                   </h3>
                   
@@ -71,12 +71,12 @@ const ProjectsSection = () => {
                   <div 
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${activeProjectId === project.id ? 'max-h-[500px] opacity-100 mt-4 md:mt-6' : 'max-h-0 opacity-0 mt-0'}`}
                   >
-                    <p className="text-base md:text-2xl text-content/80 leading-relaxed">
+                    <p className="text-base md:text-2xl text-[#1E293B]/80 leading-relaxed">
                       {project.description}
                     </p>
                   </div>
                 </div>
-                <span className="text-xl md:text-2xl font-medium text-content/50">
+                <span className="text-xl md:text-2xl font-medium text-[#1E293B]/50">
                   0{index + 1}
                 </span>
               </div>
@@ -88,7 +88,7 @@ const ProjectsSection = () => {
               )}
 
               <div className="flex justify-end items-end pb-4 md:pb-10 relative z-10">
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-content text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-xl hover:scale-110">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#1E293B] text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-xl hover:scale-110">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="md:w-6 md:h-6">
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
