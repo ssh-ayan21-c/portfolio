@@ -27,7 +27,7 @@ const AnimatedScrollBar = () => {
           <motion.div 
             key={i}
             style={{ height, opacity }}
-            className="w-[2px] bg-[#1E293B] rounded-full"
+            className="w-[2px] bg-content rounded-full"
           />
         );
       })}

@@ -3,6 +3,8 @@ import Matter from 'matter-js';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import AnimatedScrollBar from "./AnimatedScrollBar";
 import { techLogos } from './TechLogos';
+import ThemeToggle from './ThemeToggle';
+import ResumeModal from './ResumeModal';
 
 const textArray = "Ayan Mekrani".split("");
 
@@ -10,6 +12,7 @@ const AmuseHero = () => {
   const sceneRef = useRef(null);
   const engineRef = useRef(null);
   const [letters, setLetters] = useState([]);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   
   const letterNodes = useRef({});
   const groundNodes = useRef({});
@@ -228,22 +231,23 @@ const AmuseHero = () => {
       <div className="curved-container w-full h-full relative overflow-hidden">
         
         {/* Top Left Heading */}
-        <h3 className="absolute top-8 left-12 z-50 text-2xl font-serif text-[#1E293B]/50 italic">
+        <h3 className="absolute top-8 left-12 z-50 text-2xl font-serif text-content/50 italic">
           Discovery starts here...
         </h3>
 
         {/* Resume Top-Right Menu & ScrollBar */}
-        <div className="fixed top-10 right-12 z-[100] flex items-center gap-6">
+        <div className="fixed top-10 right-12 z-[100] flex items-center gap-6 pointer-events-auto">
+          <ThemeToggle />
           <AnimatedScrollBar />
-          <a 
-            href="https://drive.google.com/file/d/1Ql0aHzIGcawV8KRFAxPEwKgakqQXO-1h/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#1E293B] text-xl md:text-2xl font-bold tracking-widest uppercase hover:opacity-70 transition-opacity cursor-pointer"
+          <button 
+            onClick={() => setIsResumeOpen(true)}
+            className="text-content text-xl md:text-2xl font-bold tracking-widest uppercase hover:opacity-70 transition-opacity cursor-pointer border-none bg-transparent p-0 m-0"
           >
             Resume
-          </a>
+          </button>
         </div>
+        
+        <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
         
         {/* Physics Canvas Container */}
         <div ref={sceneRef} className="absolute inset-0 z-50 cursor-grab active:cursor-grabbing" />

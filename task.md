@@ -1,0 +1,6 @@
+- [ ] 1. Dark Mode configuration (CSS variables in index.css)
+- [ ] 2. Replace hardcoded `#1E293B` with `content` theme variable in all JSX files
+- [ ] 3. Create `ThemeToggle.jsx` and integrate into `AmuseHero.jsx` / `App.jsx`
+- [ ] 4. Create `ResumeModal.jsx` using the provided PDF details
+- [ ] 5. Integrate `ResumeModal.jsx` into `AmuseHero.jsx` instead of a direct link
+- [ ] 6. Build and verify
