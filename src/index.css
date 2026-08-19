@@ -13,6 +13,7 @@
   --theme-secondary: #F8FAFC;
   --theme-accent: #9AA6B2;
   --theme-content: #1E293B;
+  --theme-transition-text: #1E293B;
 }
 
 .dark {
@@ -20,6 +21,7 @@
   --theme-secondary: #0F172A;
   --theme-accent: #D9EAFD;
   --theme-content: #F8FAFC;
+  --theme-transition-text: #D9EAFD;
 }
 
 @layer base {

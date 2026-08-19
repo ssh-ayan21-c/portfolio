@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-mot
 
 const CircularText = () => {
   return (
-    <div className="relative flex items-center justify-center w-64 h-64 mt-[-2rem] mb-0 text-content dark:text-[#D9EAFD]">
+    <div className="relative flex items-center justify-center w-64 h-64 mt-[-2rem] mb-0 text-[var(--theme-transition-text)]">
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
@@ -73,7 +73,7 @@ const TransitionSection = () => {
   return (
     <section 
       ref={containerRef}
-      className="relative w-full h-[150vh] bg-[var(--color-secondary)] z-10 text-content dark:text-[#D9EAFD]"
+      className="relative w-full h-[150vh] bg-[var(--color-secondary)] z-10 text-[var(--theme-transition-text)]"
     >
       <div className="sticky top-0 min-h-screen w-full flex flex-col items-center justify-center overflow-hidden pt-10 pb-0">
         

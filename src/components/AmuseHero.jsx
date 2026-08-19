@@ -276,7 +276,7 @@ const AmuseHero = () => {
 
         {/* Topographical Floor Block - Rendered naturally to preserve perfect kerning */}
         <motion.div 
-          className="absolute z-20 pointer-events-none select-none text-content opacity-20 whitespace-nowrap"
+          className="absolute z-20 pointer-events-none select-none text-[var(--theme-transition-text)] opacity-20 whitespace-nowrap"
           style={{ 
             opacity: nameOpacity,
             right: '64px',
