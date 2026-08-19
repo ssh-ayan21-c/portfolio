@@ -237,8 +237,8 @@ const AmuseHero = () => {
 
         {/* Resume Top-Right Menu & ScrollBar */}
         <div className="fixed top-10 right-12 z-[100] flex items-center gap-6 pointer-events-auto">
-          <ThemeToggle />
           <AnimatedScrollBar />
+          <ThemeToggle />
           <button 
             onClick={() => setIsResumeOpen(true)}
             className="text-content text-xl md:text-2xl font-bold tracking-widest uppercase hover:opacity-70 transition-opacity cursor-pointer border-none bg-transparent p-0 m-0"
@@ -276,7 +276,7 @@ const AmuseHero = () => {
 
         {/* Topographical Floor Block - Rendered naturally to preserve perfect kerning */}
         <motion.div 
-          className="absolute z-20 pointer-events-none select-none text-gray-800 opacity-20 whitespace-nowrap"
+          className="absolute z-20 pointer-events-none select-none text-content opacity-20 whitespace-nowrap"
           style={{ 
             opacity: nameOpacity,
             right: '64px',

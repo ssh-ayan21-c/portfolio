@@ -54,9 +54,10 @@ const Navigation = () => {
             
             <a 
               href={item.href}
-              className={`text-2xl md:text-3xl font-bold tracking-tight transition-opacity ${activeSection === item.href ? 'opacity-100' : 'opacity-40 hover:opacity-100'}`}
+              className={`relative group text-2xl md:text-3xl font-bold tracking-tight transition-opacity ${activeSection === item.href ? 'opacity-100' : 'opacity-40 hover:opacity-100'}`}
             >
               {item.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full pointer-events-none"></span>
             </a>
           </li>
         ))}
